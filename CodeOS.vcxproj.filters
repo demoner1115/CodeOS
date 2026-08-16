@@ -13,21 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\data">
+      <UniqueIdentifier>{340a1669-6f7b-4c09-9198-31f76a99e0cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\users">
+      <UniqueIdentifier>{bf795081-584d-49e3-a9ee-81b7ff907a62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\core">
+      <UniqueIdentifier>{18619e1d-36a7-49c4-b17a-e4bdd9e5e371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\file">
+      <UniqueIdentifier>{6925f5e3-f4be-4c38-95b3-9d2f7fa9a757}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="function.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="users.cpp">
+      <Filter>소스 파일\users</Filter>
+    </ClCompile>
+    <ClCompile Include="terminal.cpp">
+      <Filter>소스 파일\core</Filter>
+    </ClCompile>
+    <ClCompile Include="file.cpp">
+      <Filter>소스 파일\file</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="users.txt" />
+    <Text Include="users.txt">
+      <Filter>소스 파일\data</Filter>
+    </Text>
+    <Text Include="touch.gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="function.h">
-      <Filter>소스 파일</Filter>
+    <ClInclude Include="users.h">
+      <Filter>소스 파일\users</Filter>
+    </ClInclude>
+    <ClInclude Include="terminal.h">
+      <Filter>소스 파일\core</Filter>
+    </ClInclude>
+    <ClInclude Include="file.h">
+      <Filter>소스 파일\file</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
