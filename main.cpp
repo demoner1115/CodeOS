@@ -1,6 +1,8 @@
 #include <iostream>
 #include "users.h"
 #include "terminal.h"
+#include "command.h"
+#include "shell.h"
 
 using namespace std;
 
@@ -9,7 +11,7 @@ int main() {
 		int nowstatus = 0;
 		std::string nowname = "";
 		string nowlocation = "main";
-		terminal(nowlocation, nowstatus, nowname);
+		shell();
 		if (nowstatus == -1) {
 			break;
 		}

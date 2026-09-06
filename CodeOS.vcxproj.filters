@@ -19,11 +19,17 @@
     <Filter Include="소스 파일\users">
       <UniqueIdentifier>{bf795081-584d-49e3-a9ee-81b7ff907a62}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\core">
-      <UniqueIdentifier>{18619e1d-36a7-49c4-b17a-e4bdd9e5e371}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\file">
       <UniqueIdentifier>{6925f5e3-f4be-4c38-95b3-9d2f7fa9a757}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\parser">
+      <UniqueIdentifier>{4fece310-137c-4fff-83a5-b2116f4f0a7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\command">
+      <UniqueIdentifier>{4d44449e-1def-4eff-a169-f366278cd76e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\shell">
+      <UniqueIdentifier>{c07717fe-79a8-4144-9f4d-d447d99ff7d8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,11 +39,17 @@
     <ClCompile Include="users.cpp">
       <Filter>소스 파일\users</Filter>
     </ClCompile>
-    <ClCompile Include="terminal.cpp">
-      <Filter>소스 파일\core</Filter>
-    </ClCompile>
     <ClCompile Include="file.cpp">
       <Filter>소스 파일\file</Filter>
+    </ClCompile>
+    <ClCompile Include="parser.cpp">
+      <Filter>소스 파일\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="command.cpp">
+      <Filter>소스 파일\command</Filter>
+    </ClCompile>
+    <ClCompile Include="shell.cpp">
+      <Filter>소스 파일\shell</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -50,11 +62,17 @@
     <ClInclude Include="users.h">
       <Filter>소스 파일\users</Filter>
     </ClInclude>
-    <ClInclude Include="terminal.h">
-      <Filter>소스 파일\core</Filter>
-    </ClInclude>
     <ClInclude Include="file.h">
       <Filter>소스 파일\file</Filter>
+    </ClInclude>
+    <ClInclude Include="parser.h">
+      <Filter>소스 파일\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="command.h">
+      <Filter>소스 파일\command</Filter>
+    </ClInclude>
+    <ClInclude Include="shell.h">
+      <Filter>소스 파일\shell</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

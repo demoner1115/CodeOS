@@ -67,12 +67,12 @@ void terminal(std::string& nowlocation, int& nowstatus, std::string& nowname) {
 			else if (command == "mkdir") {
 				std::string dir_name;
 				cin >> dir_name;
-				create_directory(nowlocation + "/" + dir_name);
+				create_directory(dir_name, nowlocation);
 			}
 			else if (command == "touch") {
 				std::string file_name;
 				cin >> file_name;
-				create_file(nowlocation + "/" + file_name);
+				create_file(file_name, nowlocation);
 			}
 			else {
 				cout << "error" << endl;

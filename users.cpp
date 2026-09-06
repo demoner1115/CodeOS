@@ -94,6 +94,21 @@ void Register(int& nowstatus, string&nowname, string& nowlocation) { // 1. 참�
 		else {
 			cout << "info.txt creation failed!" << endl;
 		}
+
+		fs::path dataFile = userPath / "user.dat";
+
+		ofstream data(dataFile, ios::binary);
+
+		if (data.is_open()) {
+			data << "username=" << name << endl;
+			data << "password=" << PW << endl;
+			data << "permission=1" << endl;
+			data.close();
+		}
+		else {
+			cout << "user.dat creation failed!" << endl;
+		}
+
 		nowstatus = 1;
 		nowname = name; // nowname도 업데이트
 		nowlocation = "data/" + name; // 등록 시 위치를 사용자 폴더로 변경

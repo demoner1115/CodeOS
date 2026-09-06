@@ -25,34 +25,39 @@ void showTree(const fs::path& path, std::string prefix = "")
 		}
 	}
 }
-void location_management(string wantlocation, string& nowlocation) {
+void location_management(string& nowlocation, const string& wantlocation) {
 	fs::path targetPath = fs::path(nowlocation) / wantlocation;
 
-	if (fs::exists(targetPath)) {
-		cout << "Location changed to: " << wantlocation << endl;
+	if (fs::exists(targetPath) && fs::is_directory(targetPath)) {
 		nowlocation = targetPath.string();
+
+		cout << "Location changed to: " << nowlocation << endl;
 	}
 	else {
 		cout << "Location not found." << endl;
 	}
 }
 
-void create_directory(const std::string& dir_name) {
-	if (!fs::exists(dir_name)) {
-		fs::create_directory(dir_name);
-		std::cout << "Directory created: " << dir_name << std::endl;
+void create_directory(const std::string& dir_name, const std::string& parent_path) {
+	fs::path path = fs::path(parent_path) / dir_name;
+
+	if (!fs::exists(path)) {
+		fs::create_directory(path);
+		std::cout << "Directory created: " << path << std::endl;
 	}
 	else {
 		std::cout << "Directory already exists: " << dir_name << std::endl;
+		}
 	}
-}
-void create_file(const std::string& file_name) {
-	if (!fs::exists(file_name)) {
-		std::ofstream file(file_name);
+void create_file(const std::string& file_name, const std::string& nowlocation) {
+	fs::path path = fs::path(nowlocation) / file_name;
+
+	if (!fs::exists(path)) {
+		std::ofstream file(path);
 		file.close();
-		std::cout << "File created: " << file_name << std::endl;
+		std::cout << "File created: " << path << std::endl;
 	}
 	else {
-		std::cout << "File already exists: " << file_name << std::endl;
+		std::cout << "File already exists: " << path << std::endl;
 	}
 }

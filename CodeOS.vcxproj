@@ -139,18 +139,22 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="command.cpp" />
     <ClCompile Include="file.cpp" />
+    <ClCompile Include="parser.cpp" />
+    <ClCompile Include="shell.cpp" />
     <ClCompile Include="users.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="terminal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="touch.gitignore" />
     <Text Include="users.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="command.h" />
     <ClInclude Include="file.h" />
-    <ClInclude Include="terminal.h" />
+    <ClInclude Include="parser.h" />
+    <ClInclude Include="shell.h" />
     <ClInclude Include="users.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
